@@ -78,7 +78,7 @@ class OllamaMessageChat(OllamaMessageBase, metaclass=OllamaMessageMeta):
 
     @property
     def api_suffix(self) -> str:
-        return "/chat"
+        return "/api/generate"
 
     def apply(self, messages: list[dict]) -> dict:
         content = messages[0]["content"]
@@ -330,3 +330,15 @@ class OllamaEmbed(OllamaEmbeddings):
     @property
     def _llama_embedding_key(self) -> str:
         return "embeddings"
+
+
+
+
+
+
+
+
+
+
+
+
